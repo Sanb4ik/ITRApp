@@ -1,0 +1,20 @@
+﻿.card {
+    width: 45%;
+    display: inline-block;
+}
+
+.article {
+    width: 100%;
+}
+
+.article .card-title {
+    font-size: 20px;
+}
+
+.article img {
+    height: 285px;
+}
+
+.preview-col {
+    text-align: center;
+}

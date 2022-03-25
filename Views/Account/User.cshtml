@@ -1,0 +1,25 @@
+﻿@model ServiceApp.Models.User
+
+@{
+
+    var data = ViewBag.db as DatabaseContext;
+
+}
+@*//<link rel="stylesheet" type="text/css" href="~/css/Shared/style.css" />*@
+<link rel="stylesheet" title="theme" href="#">
+
+    <h1>@Model.Username</h1>
+    <h2>@Model.Email</h2>
+    <h2>@Model.Name</h2>
+    <h2>@Model.LastName</h2>
+    <h2>@Model.RegisterDate</h2>
+    <h2>@Model.Role</h2>
+
+
+
+
+@foreach (Article article in data.Articles.Where(u => u.AuthorId == Model.Id))
+{
+    <a href="/home/article/@article.Id">@article.Title</a>
+    <hr />
+}

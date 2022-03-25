@@ -1,0 +1,96 @@
+﻿
+body {
+    padding-top: 10vh;
+    background: url(https://p4.wallpaperbetter.com/wallpaper/676/92/984/blurred-gradient-colorful-wallpaper-preview.jpg)no-repeat;
+    background-size: cover;
+}
+
+
+.form-width {
+    border-radius: 30px;
+    max-width: 35rem;
+    background: rgba(255, 255, 255, 0.16);
+    text-align: center;
+    border: rgba(255, 255, 255, 0.16);
+    
+}
+
+.button-width {
+    border-radius: 30px;
+    max-width: 10rem;
+    background: #7b97e9;
+    border: 0px;
+    margin: auto;
+}
+
+.has-float-label {
+    position: relative;
+    border-radius: 30px;
+}
+
+    .has-float-label label {
+        border-radius: 30px;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        cursor: text;
+        font-size: 7%;
+        opacity: 1;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        top: -.75em;
+        left: 0.75rem;
+        z-index: 7;
+        line-height: 15px;
+        padding: 1px;
+    }
+
+
+        .has-float-label label::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            border-radius: 30px;
+            height: 20px;
+            top: 60%;
+            left: 1%;
+            right: -.2em;
+            z-index: -1;
+        }
+
+    .has-float-label .form-control::-webkit-input-placeholder {
+        opacity: 1;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        border-radius: 30px;
+    }
+
+    .has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+        opacity: 0;
+        border-radius: 30px;
+    }
+
+    .has-float-label .form-control:placeholder-shown:not(:focus) + label {
+        font-size: 100%;
+        opacity: .7;
+        top: 10px;
+        border-radius: 30px;
+    }
+
+.input-group .has-float-label {
+    display: table-cell;
+    border-radius: 30px;
+}
+
+    .input-group .has-float-label .form-control {
+        border-radius: 30px;
+    }
+
+    .input-group .has-float-label:not(:last-child) .form-control {
+        border-radius: 30px;
+    }
+
+    .input-group .has-float-label:not(:first-child) .form-control {
+        margin-left: 2px;
+        border-radius: 30px;
+    }

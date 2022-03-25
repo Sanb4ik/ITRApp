@@ -1,0 +1,27 @@
+﻿@model Article
+
+@{
+    var data = ViewBag.db as DatabaseContext;
+}
+<link rel="stylesheet" title="theme" href="#">
+<link rel="stylesheet" type="text/css" href="~/css/CreateArticle/style.css"/>
+
+
+<form method="post" action="/create" enctype="multipart/form-data">
+    <input type="hidden" name="AuthorId" value="@data.Users.FirstOrDefault(u => u.Username == User.Identity.Name).Id" />
+    <div class="row justify-content-center">
+        <div class="drop-zone col-4">
+            <span class="drop-zone__prompt">Drop file here or click to upload</span>
+            <input type="file" name="myFile" class="drop-zone__input" accept="image/*" />
+        </div>
+        <div class="mb-3 col-8">
+            <label for="exampleFormControlInput1" class="form-label fs-1">Title</label>
+            <input type="text" name="Title" class="form-control input-color" id="exampleFormControlInput1">
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label fs-1">Content</label>
+        <textarea class="form-control input-color" name="Content" id="exampleFormControlTextarea1" rows="25"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+</form>

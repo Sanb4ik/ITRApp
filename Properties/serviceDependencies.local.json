@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/alexkuznetsov/databases/ITRBook",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:Server=tcp:alexkuznetsov.database.windows.net,1433;Initial"
+    }
+  }
+}

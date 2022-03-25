@@ -1,0 +1,30 @@
+﻿@model Article
+
+@{
+    var data = ViewBag.db as DatabaseContext;
+}
+
+@{
+    string username = data.Users.FirstOrDefault(u => u.Id == Model.AuthorId).Username;
+}
+
+@*<link rel="stylesheet" type="text/css" href="~/css/Article/style.css" />*@
+<link rel="stylesheet" title="theme" href="#">
+
+<div class="text-center">
+    <img height="300" src="https://ggwp.blob.core.windows.net/images/@(Model.fileName)" />
+</div>
+<div class="row text-center color">
+    <h1>@Model.Title</h1>
+</div>
+<div class="row">
+    <h2><div class="badge bg-dark"><a class="author-link" href="/user/@username">Author: @username</a></div></h2>
+</div>
+    @if (data.Users.FirstOrDefault(u => u.Id == Model.AuthorId).Username == User.Identity.Name || User.IsInRole("admin"))
+    {
+        <a href="/delete/@Model.Id" class="btn btn-danger">Delete</a>
+    }
+        <hr />
+<div class="article-content p-4 ">
+    <p>@Model.Content</p>
+</div>

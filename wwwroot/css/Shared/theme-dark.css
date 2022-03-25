@@ -1,0 +1,62 @@
+﻿html, body {
+    margin: 0;
+    background-color:rgb(15, 15, 15);
+    color: white;
+}
+
+.card-body{
+    background-color:rgb(26, 26, 26);
+}
+.user-img {
+    color: white;
+}
+
+
+#loginForm, #registerForm {
+    box-shadow: 0 0 10px white;
+    background-color: transparent;
+}
+
+.input-color{
+    background-color: rgb(55, 55, 55);
+   
+}
+
+.nav-color{
+    background-color:rgb(12, 12, 12);
+    color:white;
+    
+}
+
+.color {
+    color: white;
+}
+
+.author-link {
+    text-decoration: none;
+    color: white;
+}
+
+    .author-link:hover {
+        color: white;
+    }
+
+
+
+.card {
+   
+    background-color: transparent;
+}
+
+.link {
+    color: white;
+}
+
+.card-body {
+    color: white;
+}
+
+.preview-col {
+    text-align: center;
+    background-color: rgb(26,26,26);
+}

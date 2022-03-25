@@ -1,0 +1,33 @@
+﻿
+.card {
+    width: 45%;
+    display: inline-block;
+    background-color: transparent;
+  
+   
+}
+/*.link{
+    color: white;
+}
+.card-body{
+    color: white;
+}
+*/
+.article {
+    width: 100%;
+  
+}
+.card-title {
+    font-size: 20px;
+       
+}
+
+.article img {
+    height: 285px;
+}
+
+.preview-col {
+    text-align: center;
+  /*  background-color: rgb(26,26,26);*/
+   
+}

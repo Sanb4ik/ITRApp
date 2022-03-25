@@ -1,0 +1,16 @@
+﻿/* body {
+    margin: 0;
+    background-color:black;
+}*/
+.color{
+    color: white;
+}
+
+.author-link {
+    text-decoration: none;
+    color: white;
+}
+
+.author-link:hover {
+    color: white;
+}

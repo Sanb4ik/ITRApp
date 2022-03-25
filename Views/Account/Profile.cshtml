@@ -1,0 +1,10 @@
+﻿@{
+    var data = ViewBag.db as DatabaseContext;
+    User user = data.Users.First(u => u.Username == User.Identity.Name);
+}
+<div>
+    <h1 >@user.Name @(user.LastName)(@user.Username)</h1>
+<h2>Email: @user.Email</h2>
+<h2>Registration date: @user.RegisterDate</h2>
+<h2>@User.FindFirst(x => x.Type == System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType).Value</h2>
+</div>

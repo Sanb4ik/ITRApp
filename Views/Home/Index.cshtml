@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ServiceApp.Models.Article>
+
+@functions {
+
+    string GetContentPart(string content) {
+
+        int CONTENT_PART_SIZE = 500;
+
+        if (content.Length > CONTENT_PART_SIZE)
+        {
+            content = content.Substring(0, CONTENT_PART_SIZE);
+            content += "...";
+        }
+
+        return content;
+
+    }
+
+}
+<link rel="stylesheet" title="theme" href="#">
+<link rel="stylesheet" type="text/css" href="~/css/Index/style.css" />
+
+<div class="articles">
+    @foreach (Article article in Model) {
+        <div class="card mb-3 article">
+            <div class="row g-0">
+                <div class="  col-md-4 preview-col ">
+                    <img src="https://ggwp.blob.core.windows.net/images/@(article.fileName)" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8 card-body">
+                    <div class="card-body">
+                        <h5 class="card-title"><a class="link" href="/home/article/@article.Id">@article.Title</a></h5>
+                        <p class="card-text">@GetContentPart(article.Content)</p>
+                        <p class="card-text"><small class="text-muted">@article.LastEditDate.ToString()</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
